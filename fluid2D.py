@@ -120,7 +120,7 @@ def diffused_noise(shape,diffuse_amount,nIter):
 # ========== Vector Calculus ==========
 
 def integrate(field):
-    return np.sum(field,axis=[0,1])*np.prod(cellSizes)
+    return np.sum(field,axis=(0,1))*np.prod(cellSizes)
 
 def grad_x(field):
     return (roll_field(field,-1,axis=0)-roll_field(field,1,axis=0))/(2*cellSizes[0])
